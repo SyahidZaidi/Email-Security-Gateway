@@ -1,0 +1,447 @@
+/* Enhanced styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #f1f1f1; /* Light text */
+}
+
+/* Glowing Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #1e1e1e;
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3), 0 0 50px rgba(0, 255, 0, 0.2);
+    border: 3px solid transparent;
+    border-image: linear-gradient(90deg, rgba(31, 202, 54, 0.5), rgba(72, 118, 242, 0.5), rgba(31, 202, 54, 0.5)) 1;
+    animation: borderGlow 6s linear infinite;
+}
+
+@keyframes borderGlow {
+    0% {
+        border-image-source: linear-gradient(90deg, rgba(31, 202, 54, 0.5), rgba(72, 118, 242, 0.5), rgba(31, 202, 54, 0.5));
+    }
+    50% {
+        border-image-source: linear-gradient(270deg, rgba(72, 118, 242, 0.5), rgba(31, 202, 54, 0.5), rgba(72, 118, 242, 0.5));
+    }
+    100% {
+        border-image-source: linear-gradient(90deg, rgba(31, 202, 54, 0.5), rgba(72, 118, 242, 0.5), rgba(31, 202, 54, 0.5));
+    }
+}
+
+/* Header Enhancements */
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #1fca36;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px #1fca36, 0 0 30px #1fca36, 0 0 45px rgba(31, 202, 54, 0.8);
+    animation: glowPulse 2s infinite alternate;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #292929, #1f1f1f);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8), 0 0 15px rgba(31, 202, 54, 0.4);
+}
+
+.section h2 {
+    font-size: 26px;
+    color: #1fca36;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1fca36;
+    padding-bottom: 5px;
+}
+
+.setting-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #292929, #1e1e1e);
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+.setting-option:hover {
+    background: #3a3a3a;
+    transform: scale(1.02); /* Slight scaling on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.setting-option label {
+    font-size: 20px;
+    color: #e0e0e0;
+}
+
+.setting-option input[type="checkbox"] {
+    transform: scale(1.3);
+    accent-color: #1fca36; /* Accent color for checkbox */
+}
+
+button {
+    background-color: #1fca36;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 20px rgba(31, 202, 54, 0.5); /* Glow shadow */
+}
+
+button:hover {
+    background-color: #16a029;
+    transform: scale(1.05);
+}
+
+li {
+    margin: 5px 0;
+    padding: 12px;
+    background: #292929;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+li:hover {
+    background: #3a3a3a; /* Slightly lighter on hover */
+    transform: translateY(-3px); /* Lift on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Enhance shadow */
+}
+
+li a {
+    color: #1fca36; /* Bright green color for hyperlinks */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Slightly larger font for visibility */
+    font-weight: bold; /* Make the text bold */
+    display: inline-block;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transitions */
+}
+
+li a:hover {
+    color: #16a029; /* Darker green on hover */
+    text-shadow: 0 0 10px #1fca36, 0 0 20px #1fca36; /* Add glow effect */
+    transform: scale(1.02); /* Slight zoom effect */
+}
+
+li a:focus {
+    outline: none; /* Remove default outline */
+    border-bottom: 2px solid #1fca36; /* Add focus indicator */
+}
+
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px; /* Optional, to ensure a consistent size */
+}
+
+.logo-container{
+    margin-left: 40px;
+}
+
+.edit-button, .delete-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.delete-button {
+    background: red;
+    right: 10px;
+}
+
+.edit-button {
+    right: 58px;
+}
+
+.edit-button:hover, .delete-button:hover {
+    transform: scale(1.1);
+}
+
+textarea, input[type="text"] {
+    background: #292929;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus, input[type="text"]:focus {
+    border-color: #1fca36; /* Highlight border on focus */
+    outline: none;
+}
+
+textarea[readonly] {
+    background: #1e1e1e;
+    color: #9e9e9e;
+}
+
+.sidebar {
+    width: 250px;
+    background: #2b2b2b;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sidebar shadow */
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #90aecf;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #1fca36, 0 0 20px #1fca36;
+    }
+    50% {
+        text-shadow: 0 0 20px #1fca36, 0 0 40px #1fca36;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar ul li {
+        text-align: center;
+    }
+}
+
+/* Remove the blinking caret for all elements */
+* {
+    caret-color: transparent; /* Completely hides the caret */
+}
+
+/* Prevent unwanted focus effects */
+h1, h2, p, div {
+    user-select: none; /* Disable text selection */
+    outline: none; /* Remove focus outlines */
+}
+
+
+/* FAQ Container */
+.faq-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #1e1e1e; /* Dark background */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    overflow: hidden; /* Ensures smooth border animation */
+}
+
+/* Border Animation */
+.faq-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 2px; /* Thickness of the animated border */
+    background: linear-gradient(45deg, #1fca36, #1fca36a3, #4A90E2, #1fca36);
+    background-size: 300% 300%; /* Large background for smooth animation */
+    animation: gradientMove 6s ease infinite;
+    z-index: -1; /* Place it behind the container */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* FAQ Container */
+.faq-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: #1e1e1e; /* Dark background */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border: 4px solid transparent; /* Transparent border initially */
+    border-image: linear-gradient(90deg, #1fca36, #4A90E2, #1fca36) 1; /* Animated gradient */
+    animation: borderLight 3s linear infinite; /* Apply animation to border */
+}
+
+/* Border Animation */
+@keyframes borderLight {
+    0% {
+        border-image-source: linear-gradient(0deg, #1fca36, #4A90E2, #1fca36);
+    }
+    25% {
+        border-image-source: linear-gradient(90deg, #4A90E2, #1fca36, #4A90E2);
+    }
+    50% {
+        border-image-source: linear-gradient(180deg, #1fca36, #4A90E2, #1fca36);
+    }
+    75% {
+        border-image-source: linear-gradient(270deg, #4A90E2, #1fca36, #4A90E2);
+    }
+    100% {
+        border-image-source: linear-gradient(360deg, #1fca36, #4A90E2, #1fca36);
+    }
+}
+
+/* FAQ Header */
+.faq-header h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #1fca36;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #1fca36, 0 0 20px #1fca36;
+}
+
+/* FAQ Items */
+.faq-body .faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-body .faq-item h3 {
+    font-size: 20px;
+    color: #1fca36;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.faq-body .faq-item h3:hover {
+    color: #4A90E2; /* Change color on hover */
+    text-shadow: 0 0 10px #4A90E2, 0 0 20px #4A90E2;
+}
+
+.faq-body .faq-item p {
+    font-size: 16px;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 20px;
+    }
+
+    .faq-header h2 {
+        font-size: 28px;
+    }
+
+    .faq-body .faq-item h3 {
+        font-size: 18px;
+    }
+
+    .faq-body .faq-item p {
+        font-size: 14px;
+    }
+}
+
+/* Individual FAQ Question Container */
+.faq-item-container {
+    margin-bottom: 20px; /* Spacing between containers */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Smooth edges */
+    background: linear-gradient(145deg, #1f1f1f, #292929); /* Subtle gradient */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(31, 202, 54, 0.3); /* Glow effect */
+    border: 2px solid transparent;
+    border-image: linear-gradient(90deg, rgba(31, 202, 54, 0.5), rgba(72, 118, 242, 0.5), rgba(31, 202, 54, 0.5)) 1;
+    animation: borderGlow 6s linear infinite;
+}
+
+.faq-item-container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6), 0 0 20px rgba(31, 202, 54, 0.5); /* Enhanced glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* FAQ Question and Answer */
+.faq-item h3 {
+    font-size: 20px;
+    color: #1fca36;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #1fca36;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin: 0;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Security Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <img src="icons/alien.png" alt="Logo" class="logo" style="width: 150px; height: auto;">
+        </div>
+        <ul>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="encryption.html">Encryption</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="guide.html">User Guide</a></li>
+        </ul>
+    </div>
+    <div class="container">
+
+        
+        <h1>Email Security Settings</h1>
+        <div class="section">
+            <h2>Filter Settings</h2>
+            <div class="setting-option">
+                <label for="spam-filter">Enable Spam Filter</label>
+                <input type="checkbox" id="spam-filter">
+            </div>
+            <br>
+            <div class="setting-option">
+                <label for="malicious-content">Enable Malicious Content Filter</label>
+                <input type="checkbox" id="malicious-content">
+            </div>
+            <br>
+            <div class="setting-option">
+                <label for="unread-emails-only"> Detect Only Unread Emails</label>
+                <input type="checkbox" id="unread-emails-only">
+            </div>
+            <br>
+            <button class="save-btn" id="save-settings">Save Settings</button>
+        </div>
+        <div class="section">
+            <h2>Manage Spam Words</h2>
+            <input type="text" id="spam-word" placeholder="Add Spam Word">
+            <button class="add-spam-word-btn" id="add-spam-word">Add Spam Word</button>
+            <ul id="spam-list"></ul>
+        </div>
+        <div class="section">
+            <h2>Manage Threat Keywords</h2>
+            <input type="text" id="threat-word" placeholder="Add Threat Keyword">
+            <button class="add-spam-word-btn" id="add-threat-word">Add Threat Keyword</button>
+            <ul id="threat-list"></ul>
+        </div>
+        <div class="section">
+            <h2>Manage Malicious Domains</h2>
+            <input type="text" id="malicious-domain" placeholder="Add Malicious Domain">
+            <button class="add-spam-word-btn" id="add-domain">Add Domain</button>
+            <ul id="domain-list"></ul>
+        </div>
+    </div>
+
+    <script src="settings.js" defer></script>
+    <script src="spamFilter.js"></script>
+    <script src="threatFilter.js"></script>
+    <script src="crypto-js.js"></script>
+    
+
+
+
+</body>
+</html>
